@@ -19,7 +19,7 @@ Follow these steps to set up the Rumors Dashboard:
 1. Clone the Rumors Dashboard repository to your local machine.
 
 ```bash
-git clone <repository_url>
+git clone git@github.com:dcjanio/rumor_board.git
 cd rumors-dashboard
 ```
 
