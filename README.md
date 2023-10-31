@@ -1,41 +1,54 @@
-Rumors Dashboard - README
-Overview
+# Rumors Dashboard
+
+## Overview
+
 The Rumors Dashboard is a decentralized messaging platform built on the Solana blockchain. Users can submit messages, which are stored on the Solana blockchain, and these messages can be viewed on the Rumors Dashboard. This README provides an overview of the project and instructions for setting it up and using it.
 
-Prerequisites
+## Prerequisites
+
 Before getting started, ensure you have the following prerequisites:
 
-Rust installed.
-Solana Command Line Tools installed.
-A basic understanding of Solana and smart contract development.
-Installation
+1. [Rust](https://www.rust-lang.org/) installed.
+2. [Solana Command Line Tools](https://docs.solana.com/cli/install-solana-cli) installed.
+3. A basic understanding of Solana and smart contract development.
+
+## Installation
+
 Follow these steps to set up the Rumors Dashboard:
 
-Clone the Rumors Dashboard repository to your local machine.
-bash
-Copy code
+1. Clone the Rumors Dashboard repository to your local machine.
+
+```bash
 git clone <repository_url>
 cd rumors-dashboard
+```
+
+
 Install the required Rust dependencies.
-bash
-Copy code
+
+```bash
 cd smart-contract
 cargo build-bpf
+```
+
 Deploy the Smart Contract to Solana. You will need to have a Solana wallet and some SOL for this step.
-bash
-Copy code
+
+```bash
 solana wallet create
 solana airdrop 10 # Replace '10' with the desired amount of SOL
 solana program deploy target/deploy/rumors_dashboard.so
+```
+
 Copy the program ID that is printed after a successful deployment. You will need it later.
 
 Start the frontend application.
 
-bash
-Copy code
+```bash
 cd ../frontend
 npm install
 npm start
+```
+
 Access the Rumors Dashboard in your web browser at http://localhost:3000.
 Usage
 Visit the Rumors Dashboard web application.
@@ -66,9 +79,6 @@ Create a new branch for your feature or bug fix.
 Make your changes and commit them with clear commit messages.
 
 Submit a pull request to the main repository.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 Acknowledgments
 The Rumors Dashboard project is inspired by the concept of decentralized messaging on the Solana blockchain.
