@@ -1,19 +1,18 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
-  entry: './src/index.js', // The main entry point of your app, adjust if needed
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist') // 'dist' is a common output directory, adjust if needed
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Loaders
+    // If you had loaders in your old config, you can push them to config.module.rules
+    // config.module.rules.push({ /* your loader config here */ });
+
+    // Plugins
+    // If you had plugins in your old config, you can push them to config.plugins
+    // config.plugins.push(new webpack.SomePlugin());
+
+    // Custom output directory (if you really need it, but usually not recommended for Next.js)
+    // config.output.path = path.resolve(__dirname, 'dist');
+
+    return config;
   },
-  module: {
-    rules: [
-      // You might have loaders here, like for processing JS with Babel or CSS with style-loader
-    ]
-  },
-  plugins: [
-    // Any required plugins go here
-  ],
-  // ... other configuration options
-};
+}
